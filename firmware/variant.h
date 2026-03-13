@@ -10,6 +10,7 @@
 #define HAS_GPS 1
 #undef GPS_RX_PIN 20
 #undef GPS_TX_PIN 21
+#define BUTTON_PIN 9
 #define BATTERY_PIN 2
 #define ADC_CHANNEL ADC1_GPIO2_CHANNEL
 #define ADC_MULTIPLIER 3.16
