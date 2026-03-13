@@ -1,48 +1,55 @@
 # ![РУССКАЯ ВЕРСИЯ](README_RUS.md)
 # EHTMesh
 
-EHTMesh - простейший вариант реализации Meshtastic/Meshcore устройства на HT-CT62
-# Схема
-![sceheme](images/scheme1.png)
-![sceheme](images/scheme2.jpg)
-# Корпус
-Для данного проекта спроектирован корпус с возможностью горячей замены АКБ  
-https://www.printables.com/model/1636637-ht-ct62-meshtastic-case-with-added-battery 
-![body](images/body.webp)
-# Прошивка
+EHTMesh is the simplest implementation of a Meshtastic/Meshcore device on the HT-CT62.
 
-Устанавливаем jtag driver
+# Schematic
+
+![scheme](images/scheme1.png)
+![scheme](images/scheme2.jpg)
+
+# Case
+
+A case with hot-swappable battery support has been designed for this project.
+
+https://www.printables.com/model/1636637-ht-ct62-meshtastic-case-with-added-battery 
+
+![body](images/body.webp)
+
+# Firmware
+
+Install the JTAG driver
 
 ```
 Invoke-WebRequest 'https://dl.espressif.com/dl/idf-env/idf-env.exe' -OutFile .\idf-env.exe; .\idf-env.exe driver install --espressif
 ```
 
-Скачиваем Flash Download Tool
+Download Flash Download Tool  
 https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_stage/tools/flash_download_tool.html
 
-Подключаем устройство к ПК и удерживаем кнопку.
-Нода должна определится как **USB JTAG/serial debug unit**.
+Connect the device to the PC while holding the button.  
+The node should appear as **USB JTAG/serial debug unit**.
 
-Запускаем Flash Download Tool и выбираем **ESP32-C3**.
+Launch **Flash Download Tool** and select **ESP32-C3**.
 
 ![Flash tool](images/Flash_tool1.png)
 
-Выставляем флаг, указываем путь до `firmware.bin` и в правой ячейке указываем участок памяти `0x10000`.
+Enable the checkbox, specify the path to `firmware.bin`, and set the memory address to `0x10000`.
 
 ![Flash tool2](images/Flas_tool2.png)
 
-В правом нижнем углу выбираем порт(он скорее всего будет один) и нажимаем **Start**.
+In the lower right corner select the port (most likely there will be only one) and press **Start**.
 
-> ⚠️ Прошивка в репозитории обновляться не будет, поэтому если нужна свежая версия — её необходимо компилировать по гайду ниже.
+> ⚠️ The firmware in this repository will not be updated. If you need newer versions, you must compile it yourself using the guide below.
 
 ---
 
-# Компиляция прошивки с помощью VS Code
+# Compiling firmware using VS Code
 
-Устанавливаем **git**
+Install **git**  
 https://git-scm.com/install/windows
 
-В окне установки нужно выбрать пункт:
+During installation select the option:
 
 ```
 Add a Git Bash Profile to Windows Terminal
@@ -50,81 +57,84 @@ Add a Git Bash Profile to Windows Terminal
 
 ![git](images/git.png)
 
-Устанавливаем **VS Code**
+Install **VS Code**  
 https://code.visualstudio.com/download
 
-Скачиваем архив и открываем его в VS Code.
+Download the archive and open it in VS Code.
 
 https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
 
-В поиске вкладки **Extensions** пишем `PlatformIO` и устанавливаем.
+In the **Extensions** tab search for `PlatformIO` and install it.
 
 ![vscode](images/vscode_1.png)
 
-Добавляем свой или готовый файл varuant.h по пути `\variants\esp32c3\heltec_esp32c3`. А также power.h в `\src\`
+Add your own or a prepared `variant.h` file to  
+`\variants\esp32c3\heltec_esp32c3`
 
-После пишем в терминал:
+Also add `power.h` to the `\src\` directory.
+
+Then run in the terminal:
 
 ```
- C:\Users\Имя_пользователя\.platformio\penv\Scripts\platformio.exe run -e heltec-ht62-esp32c3-sx1262
+C:\Users\Username\.platformio\penv\Scripts\platformio.exe run -e heltec-ht62-esp32c3-sx1262
 ```
 
-Путь к готовой прошивке:
+Path to the compiled firmware:
 
 ```
 .pio/build/heltec-ht62-esp32c3-sx1262/... .factory.bin
 ```
 
-Для прошивки используем **исключительно файл** с расширением `.factory.bin`.
+For flashing use **only the file** with the `.factory.bin` extension.
 
 ---
 
-# Компиляция прошивки без VS Code
+# Compiling firmware without VS Code
 
-Все указанные действия рассчитаны исключительно для **Linux дистрибутивов на основе Debian**.
+All actions below are intended **only for Debian-based Linux distributions**.
 
 ```
-sudo apt install git                                            # Установка git
-sudo apt install python3-venv                                   # Установка пакета Venv
-python -m venv ~/.pio_venv                                      # Создание окружения
-source ~/.pio_venv/bin/activate                                 # Активация окружения
-pip install platformio                                          # Установка PlatformIO
-git clone https://github.com/meshtastic/firmware && cd firmware # Скачивание репозитория
-pio run -e heltec-ht62-esp32c3-sx1262                           # Компиляция прошивки
+sudo apt install git                                            # Install git
+sudo apt install python3-venv                                   # Install venv package
+python -m venv ~/.pio_venv                                      # Create environment
+source ~/.pio_venv/bin/activate                                 # Activate environment
+pip install platformio                                          # Install PlatformIO
+git clone https://github.com/meshtastic/firmware && cd firmware # Download repository
+pio run -e heltec-ht62-esp32c3-sx1262                           # Compile firmware
 ```
 
-Путь к готовой прошивке:
+Path to the compiled firmware:
 
 ```
 ~/firmware/.pio/build/heltec-ht62-esp32c3-sx1262/... .factory.bin
 ```
 
-Для прошивки используем **исключительно файл** с расширением `.factory.bin`.
+For flashing use **only the file** with the `.factory.bin` extension.
 
 ---
 
-# Изменения в прошивке
+# Firmware modifications
 
-## В файле `\src\power.h`
+## In the file `\src\power.h`
 
-| Строчка                                                                              | Назначение                                                                                       |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `#define OCV_ARRAY 4190, 4078, 4017, 3969, 3887, 3818, 3798, 3791, 3766, 3712, 3100` | Шаги процентов заряда в напряжении (4190 = 100%, 3100 = 0%). При желании можно поменять значения |
+| Line                                                                                 | Description |
+| ------------------------------------------------------------------------------------ | ----------- |
+| `#define OCV_ARRAY 4190, 4078, 4017, 3969, 3887, 3818, 3798, 3791, 3766, 3712, 3100` | Battery percentage voltage steps (4190 = 100%, 3100 = 0%). These values can be adjusted if needed |
 
 ---
 
-## В файле `\variants\esp32c3\heltec_esp32c3\variant.h`
+## In the file `\variants\esp32c3\heltec_esp32c3\variant.h`
 
-| Строчка                                  | Назначение                                                                                        |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `#define HAS_SCREEN`                     | Включение работы экрана                                                                           |
-| `#define HAS_GPS`                        | Включение работы GPS                                                                              |
-| `#define GPS_RX_PIN`                     | Пин приёма GPS данных                                                                             |
-| `#define GPS_TX_PIN`                     | Пин передачи GPS данных                                                                           |
-| `#define BUTTON_PIN`                     | Пин кнопки                                                                                        |
-| `#define I2C_SDA`                        | Пин данных I2C                                                                                    |
-| `#define I2C_SCL`                        | Пин тактирования I2C                                                                              |
-| `#define BATTERY_PIN 2`                  | Пин подключения АКБ к микроконтроллеру                                                            |
-| `#define ADC_CHANNEL ADC1_GPIO2_CHANNEL` | Определяет канал АЦП                                                                              |
-| `#define ADC_MULTIPLIER 3.16`            | Коэффициент значения с АЦП. Если показывает заряд/напряжение неправильно — можно немного изменить |
-| `#define BATTERY_SENSE_SAMPLES 5`        | Количество измерений для усреднения                                                               |
+| Line                                     | Description |
+| ---------------------------------------- | ----------- |
+| `#define HAS_SCREEN`                     | Enables display support |
+| `#define HAS_GPS`                        | Enables GPS support |
+| `#define GPS_RX_PIN`                     | GPS data receive pin |
+| `#define GPS_TX_PIN`                     | GPS data transmit pin |
+| `#define BUTTON_PIN`                     | Button pin |
+| `#define I2C_SDA`                        | I2C data pin |
+| `#define I2C_SCL`                        | I2C clock pin |
+| `#define BATTERY_PIN 2`                  | Battery connection pin to the microcontroller |
+| `#define ADC_CHANNEL ADC1_GPIO2_CHANNEL` | Defines ADC channel |
+| `#define ADC_MULTIPLIER 3.16`            | ADC scaling factor. Adjust if battery voltage/percentage is displayed incorrectly |
+| `#define BATTERY_SENSE_SAMPLES 5`        | Number of measurements used for averaging |
