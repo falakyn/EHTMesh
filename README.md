@@ -54,9 +54,9 @@ https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
 
 ![vscode](images/vscode_1.png)
 
-Добавляем свой или готовый файл varuant.h по пути `\variants\esp32c3\heltec_esp32c3`. А также power.h в `/src/`
+Добавляем свой или готовый файл varuant.h по пути `\variants\esp32c3\heltec_esp32c3`. А также power.h в `\src\`
 
-После установки пишем в терминал:
+После пишем в терминал:
 
 ```
  C:\Users\Имя_пользователя\.platformio\penv\Scripts\platformio.exe run -e heltec-ht62-esp32c3-sx1262
@@ -98,7 +98,7 @@ pio run -e heltec-ht62-esp32c3-sx1262                           # Компиля
 
 # Изменения в прошивке
 
-## В файле `/src/power.h`
+## В файле `\src\power.h`
 
 | Строчка                                                                              | Назначение                                                                                       |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
