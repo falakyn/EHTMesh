@@ -77,13 +77,13 @@ pio run -e heltec-ht62-esp32c3-sx1262
 Все указанные действия рассчитаны исключительно для **Linux дистрибутивов на основе Debian**.
 
 ```
-sudo apt install git
-sudo apt install python3-venv # Установка пакета Venv
-python -m venv ~/.pio_venv # Создание окружения
-source ~/.pio_venv/bin/activate # Активация окружения
-pip install platformio # Установка PlatformIO
-git clone https://github.com/meshtastic/firmware && cd firmware # Установка репозитория
-pio run -e heltec-ht62-esp32c3-sx1262
+sudo apt install git                                            # Установка git
+sudo apt install python3-venv                                   # Установка пакета Venv
+python -m venv ~/.pio_venv                                      # Создание окружения
+source ~/.pio_venv/bin/activate                                 # Активация окружения
+pip install platformio                                          # Установка PlatformIO
+git clone https://github.com/meshtastic/firmware && cd firmware # Скачивание репозитория
+pio run -e heltec-ht62-esp32c3-sx1262                           # Компиляция прошивки
 ```
 
 Путь к готовой прошивке:
