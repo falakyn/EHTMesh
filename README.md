@@ -1,6 +1,6 @@
 # HT-CT-62
 HT-CT-62 - это один из возможных вариантов устройств на базе HT-CT62.
-#Компиляция прошивки с помощью VS Code
+# Компиляция прошивки с помощью VS Code
 Установка git
 https://git-scm.com/install/windows
 В окне установки нужно выбраать пункт `Add a Git Bash Profile to Windows Terminal`
@@ -15,7 +15,7 @@ img
 После установки пишем в терминал `pio run -e heltec-ht62-esp32c3-sx1262`
 Путь к готовой прошивке: `.pio/build/heltec-ht62-esp32c3-sx1262/... .factory.bin`
 Для прошивки используем исключительно файл с расширением .factory.bin
-#Компиляция прошивки без VS Code
+# Компиляция прошивки без VS Code
 Все указаные действия расчитанны исключительно для linux дистрибутивов на основе Debian.
 ~~~
 sudo apt install git
@@ -28,19 +28,14 @@ pio run -e heltec-ht62-esp32c3-sx1262
 ~~~
 Путь к готовой прошивке: `~/firmware/.pio/build/heltec-ht62-esp32c3-sx1262/... .factory.bin`
 Для прошивки используем исключительно файл с расширением .factory.bin
-#Изменения в прошивке
-
-В файле /src/power.h
-#define OCV_ARRAY 4190, 4078, 4017, 3969, 3887, 3818, 3798, 3791, 3766, 3712, 3100   -   Отвечает
-
-В файле \variants\esp32c3\heltec_esp32c3\variant.h
-#define BATTERY_PIN 2
-#define ADC_CHANNEL ADC1_GPIO2_CHANNEL
-#define ADC_MULTIPLIER 3.16
-#define BATTERY_SENSE_SAMPLES 5
+# Изменения в прошивке
+В файле /src/power.h                                           
 | Строчка    | Назначение                                     |
 |-----------------|-----------------------------------------------|
-|В файле \variants\esp32c3\heltec_esp32c3\variant.h               |
+| `#define OCV_ARRAY 4190, 4078, 4017, 3969, 3887, 3818, 3798, 3791, 3766, 3712, 3100` | 
+
+В файле \variants\esp32c3\heltec_esp32c3\variant.h 
+| Строчка    | Назначение                                     |
 |-----------------|-----------------------------------------------|
 | `#define HAS_SCREEN`     | Включение работы экрана          |
 | `#define HAS_GPS`        | Включение работы GPS               |
@@ -53,7 +48,5 @@ pio run -e heltec-ht62-esp32c3-sx1262
 | `#define ADC_CHANNEL ADC1_GPIO2_CHANNEL` | Определяет канал АЦП            |
 | `#define ADC_MULTIPLIER 3.16`            | Коэффициент значения с АЦП      |
 | `#define BATTERY_SENSE_SAMPLES 5`        | Кол-во измерений для усреднения |
-|-----------------|-----------------------------------------------|
 |В файле /src/power.h                                             |
-|-----------------|-----------------------------------------------|
 | `#define OCV_ARRAY 4190, 4078, 4017, 3969, 3887, 3818, 3798, 3791, 3766, 3712, 3100` | 
