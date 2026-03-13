@@ -57,7 +57,7 @@ https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
 После установки пишем в терминал:
 
 ```
-pio run -e heltec-ht62-esp32c3-sx1262
+ C:\Users\Имя_пользователя\.platformio\penv\Scripts\platformio.exe run -e heltec-ht62-esp32c3-sx1262
 ```
 
 Путь к готовой прошивке:
