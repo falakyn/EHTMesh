@@ -1,13 +1,13 @@
 # HT-CT-62
 HT-CT-62 - это один из возможных вариантов устройств на базе HT-CT62.
 # Компиляция прошивки с помощью VS Code
-Установка git
-https://git-scm.com/install/windows
-В окне установки нужно выбраать пункт `Add a Git Bash Profile to Windows Terminal`
+Установка git  
+https://git-scm.com/install/windows  
+В окне установки нужно выбраать пункт `Add a Git Bash Profile to Windows Terminal`  
 img
-Установка VS Code 
-https://code.visualstudio.com/download
-Скачиаем архив и открываем его в VS Code.
+Установка VS Code  
+https://code.visualstudio.com/download  
+Скачиаем архив и открываем его в VS Code.  
 https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
 Путь к прошивке .pio/build/heltec-ht62-esp32c3-sx1262
 В поиске вкладки Extensions пишем PlatformIO и устанавливаем.
@@ -48,5 +48,4 @@ pio run -e heltec-ht62-esp32c3-sx1262
 | `#define ADC_CHANNEL ADC1_GPIO2_CHANNEL` | Определяет канал АЦП            |
 | `#define ADC_MULTIPLIER 3.16`            | Коэффициент значения с АЦП      |
 | `#define BATTERY_SENSE_SAMPLES 5`        | Кол-во измерений для усреднения |
-|В файле /src/power.h                                             |
-| `#define OCV_ARRAY 4190, 4078, 4017, 3969, 3887, 3818, 3798, 3791, 3766, 3712, 3100` | 
+
