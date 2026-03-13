@@ -1,6 +1,6 @@
 # EHTMesh
 
-EHTMesh - пройтейший вариант реализации Meshtastic/Meshcore устройства на HT-CT62
+EHTMesh - простейший вариант реализации Meshtastic/Meshcore устройства на HT-CT62
 # Схема
 
 # Корпус
