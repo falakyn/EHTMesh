@@ -54,6 +54,8 @@ https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
 
 ![vscode](images/vscode_1.png)
 
+Добавляем свой или готовый файл varuant.h по пути `\variants\esp32c3\heltec_esp32c3`. А также power.h в `/src/`
+
 После установки пишем в терминал:
 
 ```
