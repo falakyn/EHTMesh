@@ -14,7 +14,7 @@ A case with hot-swappable battery support has been designed for this project.
 
 https://www.printables.com/model/1636637-ht-ct62-meshtastic-case-with-added-battery 
 
-![body](images/body.webp)
+![body](images/body.jpg)
 
 # Firmware
 
