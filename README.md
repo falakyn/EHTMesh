@@ -18,7 +18,7 @@ https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_st
 
 Запускаем Flash Download Tool и выбираем **ESP32-C3**.
 
-![Flash tool](images/flash_tool1.png)
+![Flash tool](images/Flash_tool1.png)
 
 Выставляем галочку, указываем путь до `firmware.bin` и в правой ячейке указываем участок памяти `0x10000`.
 
