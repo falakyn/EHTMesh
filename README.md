@@ -8,7 +8,7 @@ img
 Устанавливем VS Code  
 https://code.visualstudio.com/download  
 Скачиаем архив и открываем его в VS Code.  
-https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
+https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip  
 В поиске вкладки Extensions пишем PlatformIO и устанавливаем.  
 img  
 После установки пишем в терминал `pio run -e heltec-ht62-esp32c3-sx1262`  
