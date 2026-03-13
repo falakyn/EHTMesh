@@ -6,7 +6,7 @@ EHTMesh is the simplest implementation of a Meshtastic/Meshcore device on the HT
 
 # Schematic
 
-![scheme](images/scheme1.png)
+
 ![scheme](images/scheme2.jpg)
 
 # Case
