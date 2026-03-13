@@ -22,11 +22,9 @@ https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_st
 
 Выставляем галочку, указываем путь до `firmware.bin` и в правой ячейке указываем участок памяти `0x10000`.
 
-img
+![Flash tool2](images/Flas_tool2.png)
 
 В правом нижнем углу выбираем порт(он скорее всего будет один) и нажимаем **Start**.
-
-img
 
 > ⚠️ Прошивка в репозитории обновляться не будет, поэтому если нужна свежая версия — её необходимо компилировать по гайду ниже.
 
@@ -43,7 +41,7 @@ https://git-scm.com/install/windows
 Add a Git Bash Profile to Windows Terminal
 ```
 
-img
+![git](images/git.png)
 
 Устанавливаем **VS Code**
 https://code.visualstudio.com/download
@@ -54,7 +52,7 @@ https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
 
 В поиске вкладки **Extensions** пишем `PlatformIO` и устанавливаем.
 
-img
+![vscode](images/vscode_1.png)
 
 После установки пишем в терминал:
 
