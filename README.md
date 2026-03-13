@@ -2,7 +2,8 @@
 
 EHTMesh - простейший вариант реализации Meshtastic/Meshcore устройства на HT-CT62
 # Схема
-
+![sceheme](scheme1.png)
+![sceheme](scheme2.jpg)
 # Корпус
 Для данного проекта спроектирован корпус с возможностью горячей замены АКБ  
 https://www.printables.com/model/1636637-ht-ct62-meshtastic-case-with-added-battery 
