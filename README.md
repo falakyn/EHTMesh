@@ -1,4 +1,4 @@
-# ![РУССКАЯ ВЕРСИЯ](README_RUS)
+# ![РУССКАЯ ВЕРСИЯ](README_RUS.md)
 # EHTMesh
 
 EHTMesh - простейший вариант реализации Meshtastic/Meshcore устройства на HT-CT62
