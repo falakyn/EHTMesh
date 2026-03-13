@@ -1,11 +1,11 @@
 # HT-CT-62
 HT-CT-62 - это один из возможных вариантов устройств на базе HT-CT62.
 # Компиляция прошивки с помощью VS Code
-Установливем git  
+Устанавливем git  
 https://git-scm.com/install/windows  
 В окне установки нужно выбраать пункт `Add a Git Bash Profile to Windows Terminal`  
 img  
-Установливем VS Code  
+Устанавливем VS Code  
 https://code.visualstudio.com/download  
 Скачиаем архив и открываем его в VS Code.  
 https://github.com/meshtastic/firmware/archive/refs/heads/develop.zip
