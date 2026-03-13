@@ -1,7 +1,10 @@
 # EHTMesh
 
 EHTMesh - пройтейший вариант реализации Meshtastic/Meshcore устройства на HT-CT62
-
+# Корпус
+Для данного проекта спроектирован корпус с возможностью горячей замены АКБ  
+https://www.printables.com/model/1636637-ht-ct62-meshtastic-case-with-added-battery 
+![body](images/body.webp)
 # Прошивка
 
 Устанавливаем jtag driver
