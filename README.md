@@ -20,7 +20,7 @@ https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_st
 
 ![Flash tool](images/Flash_tool1.png)
 
-Выставляем галочку, указываем путь до `firmware.bin` и в правой ячейке указываем участок памяти `0x10000`.
+Выставляем флаг, указываем путь до `firmware.bin` и в правой ячейке указываем участок памяти `0x10000`.
 
 ![Flash tool2](images/Flas_tool2.png)
 
