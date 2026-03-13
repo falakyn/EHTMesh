@@ -2,6 +2,7 @@
 # EHTMesh
 
 EHTMesh is the simplest implementation of a Meshtastic/Meshcore device on the HT-CT62.
+![photo](images/photo.jpg)
 
 # Schematic
 
