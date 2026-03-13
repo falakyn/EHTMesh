@@ -1,5 +1,17 @@
 # HT-CT-62
 HT-CT-62 - это один из возможных вариантов устройств на базе HT-CT62.
+# Прошивка
+Устанавливаем jtag driver  
+`Invoke-WebRequest 'https://dl.espressif.com/dl/idf-env/idf-env.exe' -OutFile .\idf-env.exe; .\idf-env.exe driver install --espressif`
+Скачиваем Flash Download Tool  
+https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_stage/tools/flash_download_tool.html  
+Подключаем устройство к пк и удерживаем кнопку. Нода должна определится как USB JTAG/serial debug unit.
+Запускаем Flash Download Tool и выбираем ESP32-C3.  
+img  
+Выставляем галочку, указываем путь до firmware.bin и в правой ячейке укзываем участок памяти 0x10000.  
+img  
+В правом нижнем углу выбираем порт и нажимаем старт.  
+img  
 # Компиляция прошивки с помощью VS Code
 Устанавливем git  
 https://git-scm.com/install/windows  
