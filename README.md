@@ -12,21 +12,21 @@ EHTMesh is the simplest implementation of a Meshtastic/Meshcore device on the HT
 
 | Name                             | Description |
 | ---------------------------------------- | ----------- |
-|Capacitors:                   | Enables display support |
+|**Capacitors:**                   | |
 |C1 | 0.1uF |
 |C2,C6 | 10uF|
 |C3   |  4.7uF|
 |C4   |  100nf|
 |C5   |  8.2pF|
-|diode:| |
+|**Diode:**| |
 |D1,D2  | LED|
 |connectors:||
 |J3     |Conn_01x04_Pin|
 |L2     | 2.2uH|
 |P2     | USB_C_Plug|
-|transistor:||
+|**Transistor:**||
 |Q1, Q2  |  FDS6898A|
-|resistors:||
+|**Resistors:**||
 |R1            | 100|
 |R2,R11,R14    | 1K|
 |R3            | 1K2|
@@ -38,7 +38,7 @@ EHTMesh is the simplest implementation of a Meshtastic/Meshcore device on the HT
 |R15           | 250K|
 |R16           | 56K|
 |R17,R18       |0|
-|IC:||
+|**IC:**||
 |U1            | HT-CT62|
 |U2            | TP4056-42-ESOP8|
 |D3            | RT8059|
