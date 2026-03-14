@@ -22,8 +22,9 @@ EHTMesh is the simplest implementation of a Meshtastic/Meshcore device on the HT
 |D1,D2  | LED|
 |**Connectors:**||
 |J3     |Conn_01x04_Pin|
-|L2     | 2.2uH|
 |P2     | USB_C_Plug|
+|**Inductors:**||
+|L2     | 2.2uH|
 |**Transistor:**||
 |Q1, Q2  |  FDS6898A|
 |**Resistors:**||
