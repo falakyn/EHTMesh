@@ -55,6 +55,7 @@ https://www.printables.com/model/1636637-ht-ct62-meshtastic-case-with-added-batt
 # Firmware
 
 Install the JTAG driver
+Powershell:
 
 ```
 Invoke-WebRequest 'https://dl.espressif.com/dl/idf-env/idf-env.exe' -OutFile .\idf-env.exe; .\idf-env.exe driver install --espressif
