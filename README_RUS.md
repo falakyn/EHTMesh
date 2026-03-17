@@ -51,7 +51,8 @@ https://www.printables.com/model/1636637-ht-ct62-meshtastic-case-with-added-batt
 Invoke-WebRequest 'https://dl.espressif.com/dl/idf-env/idf-env.exe' -OutFile .\idf-env.exe; .\idf-env.exe driver install --espressif
 ```
 
-Скачиваем Flash Download Tool
+Скачиваем Flash Download Tool  
+Powershell:
 https://docs.espressif.com/projects/esp-test-tools/en/latest/esp32/production_stage/tools/flash_download_tool.html
 
 Подключаем устройство к ПК и удерживаем кнопку.
